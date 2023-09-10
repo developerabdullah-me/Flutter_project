@@ -52,6 +52,7 @@ class HomeActivity extends StatelessWidget {
       ),
 
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home),label:"Home"),
           BottomNavigationBarItem(icon: Icon(Icons.search_rounded),label:"Search"),
@@ -59,6 +60,28 @@ class HomeActivity extends StatelessWidget {
 
         ],
       ),
+      body:Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              style:ElevatedButton.styleFrom(
+                backgroundColor: Colors.red,
+                    textStyle:TextStyle(
+                 fontSize: 20,
+                      fontWeight: FontWeight.w600,
+        ),
+              ),
+                onPressed: (){
+              print("mail hasben send");
+
+            },child: Text("send mail")),
+            TextButton(onPressed: (){
+              print("Resent email");
+            }, child: Text('Resent'))
+          ],
+        ),
+      )
     );
 
   }
