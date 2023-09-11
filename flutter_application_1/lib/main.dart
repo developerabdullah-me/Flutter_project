@@ -64,6 +64,24 @@ class HomeActivity extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              height: 200,
+              width: 200,
+              decoration: BoxDecoration(
+                color: Colors.cyan,
+                border:Border.all(color: Colors.black87,width: 2,),
+                // borderRadius:BorderRadius.circular(10),
+                              borderRadius: BorderRadius.only(topRight:Radius.circular(20),
+                              bottomLeft:Radius.circular(20) ),
+              ),
+              child: Text("Hello World"),
+              alignment: Alignment.center,
+            ),
+
+            SizedBox(
+              height: 20,
+            ),
+
             ElevatedButton(
               style:ElevatedButton.styleFrom(
                 backgroundColor: Colors.red,
@@ -78,7 +96,25 @@ class HomeActivity extends StatelessWidget {
             },child: Text("send mail")),
             TextButton(onPressed: (){
               print("Resent email");
-            }, child: Text('Resent'))
+            }, child: Text('Resent')),
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter Your Email',
+                label: Text("Email"),
+              ),
+            ),
+
+            // SizedBox(
+            //   height: 30,
+            // ),
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter Your Email',
+                label: Text("Email"),
+              ),
+            ),
           ],
         ),
       )
