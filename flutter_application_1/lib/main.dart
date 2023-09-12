@@ -93,10 +93,13 @@ class HomeActivity extends StatelessWidget {
                 onPressed: (){
               print("mail hasben send");
 
-            },child: Text("send mail")),
+            },
+            child: Text("send mail")),
             TextButton(onPressed: (){
               print("Resent email");
-            }, child: Text('Resent')),
+            },
+             child: Text('Resent')),
+             
             TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
